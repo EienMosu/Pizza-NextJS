@@ -16,8 +16,7 @@ const Footer = () => {
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>FIND OUR RESTAURANTS</h1>
-        </div>
-        <div className={styles.card}>
+
           <p className={styles.text}>
             1254 B. Mc Road #304.
             <br /> NewYork, 82132
@@ -38,17 +37,17 @@ const Footer = () => {
             <br /> NewYork, 09671
             <br /> (295) 986-5423
           </p>
-          <div className={styles.card}>
-            <h1 className={styles.title}>WORKING HOURS</h1>
-            <p className={styles.text}>
-              MONDAY UNTIL FRIDAY
-              <br /> 9.00 - 23.00
-            </p>
-            <p className={styles.text}>
-              SATURDAY - SUNDAY
-              <br /> 12.00 - 20.00
-            </p>
-          </div>
+        </div>
+        <div className={styles.card}>
+          <h1 className={styles.title}>WORKING HOURS</h1>
+          <p className={styles.text}>
+            MONDAY UNTIL FRIDAY
+            <br /> 9.00 - 23.00
+          </p>
+          <p className={styles.text}>
+            SATURDAY - SUNDAY
+            <br /> 12.00 - 20.00
+          </p>
         </div>
       </div>
     </div>
