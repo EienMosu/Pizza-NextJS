@@ -1,0 +1,23 @@
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+    margin: 50px;
+}
+
+.desc {
+    font-size: 24px;
+    margin: 50px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
