@@ -1,0 +1,94 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.leftContainer {
+  flex: 2;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.name {
+  font-weight: 500;
+  color: #d1411e;
+  font-size: 18px;
+}
+
+.total {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.row:last-child {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s ease infinite alternate;
+}
+
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.undone .checkedIcon, .inProgress .checkedIcon {
+    display: none;
+}
+
+.rightContainer {
+  flex: 1;
+}
+
+.wrapper {
+  width: 90%;
+  min-height: 300px;
+  background-color: #333;
+  padding: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.button {
+  background-color: white;
+  height: 30px;
+  color: teal;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: not-allowed;
+}

@@ -1,3 +1,59 @@
 .container {
-    
+  padding: 50px;
+  display: flex;
+}
+
+.leftContainer {
+  flex: 2;
+}
+
+.imgContainer {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+
+.name {
+  font-weight: 500;
+  color: #d1411e;
+  font-size: 18px;
+}
+
+.total {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.rightContainer {
+  flex: 1;
+}
+
+.wrapper {
+  width: 90%;
+  min-height: 300px;
+  background-color: #333;
+  padding: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.button {
+  height: 30px;
+  color: #d1411e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
 }

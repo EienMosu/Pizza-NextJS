@@ -15,17 +15,17 @@ const Product = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.leftContainer}>
+      <div className={styles.left}>
         <div className={styles.imgContainer}>
           <Image src={pizza.img} alt="" layout="fill" objectFit="contain" />
         </div>
       </div>
-      <div className={styles.rightContainer}>
+      <div className={styles.right}>
         <h1 className={styles.title}>{pizza.name}</h1>
         <span className={styles.price}>${pizza.price[size]}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
-        <div className={styles.sizeContainer}>
+        <div className={styles.sizes}>
           <div className={styles.size} onClick={() => setSize(0)}>
             <Image src="/img/size.png" alt="" layout="fill" />
             <span className={styles.number}>Small</span>
