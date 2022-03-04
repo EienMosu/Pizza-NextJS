@@ -81,6 +81,10 @@
     color: #d1411e;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 @media screen and (max-width:480px) {
   .item:nth-child(2) {
     display: none;

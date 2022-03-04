@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -20,7 +21,9 @@ const Navbar = () => {
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           {/* <Image src="/img/logo.png" alt="" width="250px" height="100px" />  */}
-          <h1 className={styles.logo}>Ozkan's Pizza</h1>
+          <Link href="/">
+            <h1 className={styles.logo}>Ozkan's Pizza</h1>
+          </Link>
           <li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>Contact</li>
