@@ -2,12 +2,18 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Product.module.css";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../../redux/cartRedux";
 
 const Product = ({ pizza }) => {
+  const dispatch = useDispatch();
+
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(pizza.prices[0]);
   const [extras, setExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
+
+  const state = useSelector((state) => state.cart);
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -45,6 +51,19 @@ const Product = ({ pizza }) => {
       //   extras.splice(index, 1);
       // }
     }
+  };
+
+  const handleSubmit = () => {
+    const payload = {
+      name: pizza.title,
+      img: pizza.img,
+      choosenSize: size,
+      extrasChoose: extras,
+      price,
+      quantity,
+    };
+
+    dispatch(addProduct(payload));
   };
 
   return (
@@ -97,7 +116,9 @@ const Product = ({ pizza }) => {
             max="10"
             onChange={(event) => setQuantity(event.target.value)}
           />
-          <button className={styles.button}>Add to Cart</button>
+          <button onClick={() => handleSubmit()} className={styles.button}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
