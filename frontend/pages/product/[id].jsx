@@ -12,8 +12,13 @@ const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [extras, setExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [success, setSuccess] = useState(false);
 
   const state = useSelector((state) => state.cart);
+
+  const handleQuanitity = (event) => {
+    setQuantity(event.target.value);
+  };
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -59,11 +64,17 @@ const Product = ({ pizza }) => {
       img: pizza.img,
       choosenSize: size,
       extrasChoose: extras,
-      price,
+      price: price,
+      productTotal: price * quantity,
       quantity,
     };
 
     dispatch(addProduct(payload));
+    setSuccess(true);
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 2000);
   };
 
   return (
@@ -114,12 +125,18 @@ const Product = ({ pizza }) => {
             defaultValue="1"
             min="1"
             max="10"
-            onChange={(event) => setQuantity(event.target.value)}
+            pattern="[1-9]"
+            onChange={(event) => handleQuanitity(event)}
           />
           <button onClick={() => handleSubmit()} className={styles.button}>
             Add to Cart
           </button>
         </div>
+        {success && (
+          <span style={{ color: "red", fontSize: "14px" }}>
+            Your Order is Successfully Added!
+          </span>
+        )}
       </div>
     </div>
   );

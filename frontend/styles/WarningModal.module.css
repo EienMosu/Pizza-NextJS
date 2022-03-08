@@ -1,0 +1,61 @@
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+.buttonContainer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yes {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.no {
+  width: 100px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  margin-left: 50px;
+  cursor: pointer;
+  border: none;
+  border: 1px solid white;
+  border-radius: 5px;
+}
