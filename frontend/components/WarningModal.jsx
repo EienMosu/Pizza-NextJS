@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "../styles/WarningModal.module.css";
+import {useRouter} from "next/router"
 
 const WarningModal = ({ cancel, warning }) => {
+  const router = useRouter();
 
   const handleYes = () => {
     cancel();
     warning(false);
+    router.push("/")
   };
 
   const handleNo = () => {

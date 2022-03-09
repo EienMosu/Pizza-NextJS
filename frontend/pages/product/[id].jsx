@@ -1,7 +1,11 @@
+import React, { useState } from "react";
+// NextJS
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+// CSS
 import styles from "../../styles/Product.module.css";
+// Axios
 import axios from "axios";
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/cartRedux";
 
@@ -142,8 +146,6 @@ const Product = ({ pizza }) => {
   );
 };
 
-export default Product;
-
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
     `http://localhost:3000/api/products/${params.id}`
@@ -154,3 +156,5 @@ export const getServerSideProps = async ({ params }) => {
     },
   };
 };
+
+export default Product;

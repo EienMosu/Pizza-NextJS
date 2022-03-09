@@ -5,7 +5,7 @@ import ProductList from "../components/ProductList";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 
-export default function Home({ productList }) {
+const Home = ({ productList }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +17,7 @@ export default function Home({ productList }) {
       <ProductList productList={productList} />
     </div>
   );
-}
+};
 
 export const getServerSideProps = async () => {
   const response = await axios.get("http://localhost:3000/api/products");
@@ -27,3 +27,5 @@ export const getServerSideProps = async () => {
     },
   };
 };
+
+export default Home;

@@ -20,7 +20,11 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Homepage</li>
+          <Link href="/">
+            <li className={styles.listItem} style={{ cursor: "pointer" }}>
+              Homepage
+            </li>
+          </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           {/* <Image src="/img/logo.png" alt="" width="250px" height="100px" />  */}
@@ -36,7 +40,7 @@ const Navbar = () => {
         <Link href="/cart">
           <div className={styles.cart}>
             <Image src="/img/cart.png" alt="" width="30px" height="30px" />
-            <div className={styles.counter}>{quantity}</div>
+            {quantity !== 0 && <div className={styles.counter}>{quantity}</div>}
           </div>
         </Link>
       </div>
