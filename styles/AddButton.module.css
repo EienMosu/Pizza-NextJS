@@ -1,0 +1,14 @@
+.container {
+  width: 100vw;
+  padding: 50px;
+}
+
+.addButton {
+  background-color: #d1411e;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

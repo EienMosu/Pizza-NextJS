@@ -4,8 +4,13 @@ import Featured from "../components/Featured";
 import ProductList from "../components/ProductList";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
+import AddButton from "../components/AddButton";
+import { useState } from "react";
+import AddPizzaButton from "../components/AddPizzaButton";
 
 const Home = ({ productList, admin }) => {
+  const [addPizza, setAddPizza] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +19,8 @@ const Home = ({ productList, admin }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
+      {admin && <AddButton setAddPizza={setAddPizza} />}
+      {addPizza && <AddPizzaButton />}
       <ProductList productList={productList} />
     </div>
   );
