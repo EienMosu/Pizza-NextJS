@@ -28,9 +28,9 @@ const Navbar = () => {
           <Link href="/">
             <h1 className={styles.logo}>Ozkan's Pizza</h1>
           </Link>
-          <Link href="/admin/login">
+          <Link href="/admin">
             <li className={styles.listItem} style={{ cursor: "pointer" }}>
-              Admin-Login
+              Admin-Dashboard
             </li>
           </Link>
         </ul>

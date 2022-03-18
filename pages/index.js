@@ -20,7 +20,7 @@ const Home = ({ productList, admin }) => {
       </Head>
       <Featured />
       {admin && <AddButton setAddPizza={setAddPizza} />}
-      {addPizza && <AddPizzaButton />}
+      {addPizza && <AddPizzaButton setAddPizza={setAddPizza} />}
       <ProductList productList={productList} />
     </div>
   );
