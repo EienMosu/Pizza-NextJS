@@ -9,16 +9,18 @@ const Index = ({ orders, products }) => {
   const status = ["Preparing", "On the Way", "Delivered"];
 
   const handleDelete = async (id) => {
-    try {
-      const response = await axios.delete(
-        `http://localhost:3000/api/products/${id}`
-      );
+    // try {
+    //   const response = await axios.delete(
+    //     `http://localhost:3000/api/products/${id}`
+    //   );
 
-      console.log(response);
-      router.reload(window.location.pathname);
-    } catch (err) {
-      console.log(err);
-    }
+    //   console.log(response);
+    //   router.reload(window.location.pathname);
+    // } catch (err) {
+    //   console.log(err);
+    // }
+
+    console.log("Cannot let you delete!")
   };
 
   const handleEdit = async () => {
