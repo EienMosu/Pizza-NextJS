@@ -11,7 +11,7 @@ const Index = ({ orders, products }) => {
   const handleDelete = async (id) => {
     // try {
     //   const response = await axios.delete(
-    //     `http://localhost:3000/api/products/${id}`
+    //     `https://pizza-ozkan.vercel.app/api/products/${id}`
     //   );
 
     //   console.log(response);
@@ -28,7 +28,7 @@ const Index = ({ orders, products }) => {
 
     // try {
     //   const response = await axios.put(
-    //     `${window.location.origin}/api/products/${id}`,
+    //     `https://pizza-ozkan.vercel.app/api/products/${id}`,
     //     data
     //   );
 
@@ -48,7 +48,7 @@ const Index = ({ orders, products }) => {
     if (data.status <= 2) {
       try {
         const response = await axios.put(
-          `${window.location.origin}/api/orders/${id}`,
+          `https://pizza-ozkan.vercel.app/api/orders/${id}`,
           data
         );
 
@@ -60,7 +60,7 @@ const Index = ({ orders, products }) => {
     } else {
       try {
         const response = await axios.delete(
-          `${window.location.origin}/api/orders/${id}`
+          `https://pizza-ozkan.vercel.app/api/orders/${id}`
         );
 
         console.log(response);
@@ -169,9 +169,9 @@ export const getServerSideProps = async (ctx, window) => {
   }
 
   const productResponse = await axios.get(
-    `${window.location.origin}/api/products`
+    `https://pizza-ozkan.vercel.app/api/products`
   );
-  const orderResponse = await axios.get(`${window.location.origin}/api/orders`);
+  const orderResponse = await axios.get(`https://pizza-ozkan.vercel.app/api/orders`);
 
   return {
     props: {

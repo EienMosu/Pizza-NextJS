@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `${window.location.origin}/api/login`,
+        `https://pizza-ozkan.vercel.app/api/login`,
         data
       );
 

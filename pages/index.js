@@ -34,7 +34,7 @@ export const getServerSideProps = async (ctx, window) => {
     admin = true;
   }
 
-  const response = await axios.get(`${window.location.origin}/api/products`);
+  const response = await axios.get(`https://pizza-ozkan.vercel.app/api/products`);
   return {
     props: {
       productList: response.data,

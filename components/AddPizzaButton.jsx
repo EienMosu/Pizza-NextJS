@@ -34,7 +34,7 @@ const AddPizzaButton = ({ setAddPizza }) => {
 
       try {
         const response = await axios.post(
-          `${window.location.origin}/api/products`,
+          `https://pizza-ozkan.vercel.app/api/products`,
           newProduct
         );
 

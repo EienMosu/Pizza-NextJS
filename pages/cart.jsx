@@ -91,7 +91,7 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const response = await axios.post(
-        `${window.location.origin}/api/orders`,
+        `https://pizza-ozkan.vercel.app/api/orders`,
         data
       );
 
