@@ -115,7 +115,7 @@ const Order = ({ order }) => {
   );
 };
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }, window) => {
   const response = await axios.get(
     `${window.location.origin}/api/orders/${params.id}`
   );
