@@ -34,7 +34,7 @@ const AddPizzaButton = ({ setAddPizza }) => {
 
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/products",
+          `${window.location.origin}/api/products`,
           newProduct
         );
 

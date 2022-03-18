@@ -148,7 +148,7 @@ const Product = ({ pizza }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    `${window.location.origin}/api/products/${params.id}`
   );
   return {
     props: {

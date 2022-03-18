@@ -91,7 +91,7 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/orders",
+        `${window.location.origin}/api/orders`,
         data
       );
 

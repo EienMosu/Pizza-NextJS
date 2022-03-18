@@ -20,22 +20,23 @@ const Index = ({ orders, products }) => {
     //   console.log(err);
     // }
 
-    console.log("Cannot let you delete!")
+    console.log("Cannot let you delete!");
   };
 
   const handleEdit = async () => {
-    const data = {};
+    // const data = {};
 
-    try {
-      const response = await axios.put(
-        `http://localhost:3000/api/products/${id}`,
-        data
-      );
+    // try {
+    //   const response = await axios.put(
+    //     `${window.location.origin}/api/products/${id}`,
+    //     data
+    //   );
 
-      console.log(response);
-    } catch (err) {
-      console.log(err);
-    }
+    //   console.log(response);
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    console.log("Cannot let you edit!");
   };
 
   const handleStatus = async (id) => {
@@ -47,7 +48,7 @@ const Index = ({ orders, products }) => {
     if (data.status <= 2) {
       try {
         const response = await axios.put(
-          `http://localhost:3000/api/orders/${id}`,
+          `${window.location.origin}/api/orders/${id}`,
           data
         );
 
@@ -59,7 +60,7 @@ const Index = ({ orders, products }) => {
     } else {
       try {
         const response = await axios.delete(
-          `http://localhost:3000/api/orders/${id}`
+          `${window.location.origin}/api/orders/${id}`
         );
 
         console.log(response);
@@ -158,7 +159,7 @@ const Index = ({ orders, products }) => {
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
 
-  if ((myCookie.token !== process.env.TOKEN)) {
+  if (myCookie.token !== process.env.TOKEN) {
     return {
       redirect: {
         destination: "/admin/login",
@@ -167,8 +168,10 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productResponse = await axios.get("http://localhost:3000/api/products");
-  const orderResponse = await axios.get("http://localhost:3000/api/orders");
+  const productResponse = await axios.get(
+    `${window.location.origin}/api/products`
+  );
+  const orderResponse = await axios.get(`${window.location.origin}/api/orders`);
 
   return {
     props: {
