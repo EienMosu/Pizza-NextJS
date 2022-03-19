@@ -117,7 +117,7 @@ const Order = ({ order }) => {
 
 export const getServerSideProps = async ({ params }, window) => {
   const response = await axios.get(
-    `https://pizza-ozkan.vercel.app/api/orders/${params.id}`
+    `https://angry-swartz-81a245.netlify.app/api/orders/${params.id}`
   );
   return {
     props: {

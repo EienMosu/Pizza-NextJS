@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `https://pizza-ozkan.vercel.app/api/login`,
+        `https://angry-swartz-81a245.netlify.app/api/login`,
         data
       );
 
