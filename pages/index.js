@@ -26,7 +26,7 @@ const Home = ({ productList, admin }) => {
   );
 };
 
-export const getInitialProps = async (ctx) => {
+export const getServerSideProps = async (ctx, window) => {
   const myCookie = ctx.req?.cookies || "";
   let admin = false;
 
